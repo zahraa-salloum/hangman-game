@@ -1,4 +1,5 @@
 let lose_count = 0;
+let status_game = document.getElementById("status");
 const letters = document.getElementById("letters");
 let hint = document.getElementById("hint");
 for (let i = 65; i < 91; i++) {
@@ -36,12 +37,15 @@ for (let i = 0; i < button.length; i++){
         button[i].disabled = true;
         if(!random_word.toLowerCase().includes(button_value.toLowerCase())){
             lose_count += 1;
-            // console.log(lose_count)
+            console.log(lose_count)
+        }
+        if(lose_count == 6){
+            status_game.innerText = "You lose"
         }
     })
     
 }
-// console.log(random_word)
+console.log(random_word)
 
 
 

@@ -1,4 +1,5 @@
 let lose_count = 0;
+let str = "";
 let status_game = document.getElementById("status");
 const letters = document.getElementById("letters");
 let image = document.getElementById("image");
@@ -65,10 +66,25 @@ for (let i = 0; i < button.length; i++){
         }
 
         
+        
+        if(random_word.toLowerCase().includes(button_value.toLowerCase()) && lose_count < 6){
+        for (var index = 0; index < random_word.length; index++) {
+            if (random_word[index].toLowerCase() === button_value.toLowerCase()) {
+                word_length = setCharAt(word_length,index,button_value.toLowerCase())
+                
+            }
+        }
+        // console.log(word_length)
+        word_to_guess.innerHTML = word_length;
+    }
     })
     
 }
-console.log(random_word)
+function setCharAt(str,index,chr) {
+    if(index > str.length-1) return str;
+    return str.substring(0,index) + chr + str.substring(index+1);
+}
+// console.log(random_word)
 
 
 

@@ -1,21 +1,27 @@
 body {
-    background-color: rgb(237, 234, 37);
+    background-color: #2e75b6;
   }
 .letters{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fbf3da;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 15px #c5c5c5, -2px 1px 30px #030200;
 }
 .button{
     margin: 10px;
-    background-color: rgb(176, 174, 47);
+    background-color:#ecbc10;
     cursor: pointer;
     box-shadow: 0 5px #999;
     text-align: center;
     font-size: 15px;
     width: 100px;
+    border: 1px solid #000000 ;
   }
   .button:active {
-    background-color: rgb(176, 174, 47);
+    background-color:#ecbc10;
     box-shadow: 0 5px #666666;
     transform: translateY(4px);
   }
@@ -23,7 +29,6 @@ body {
 img{
     width: 200px;
     height: 200px;
-    border: 2px solid black;
     display: block;
     margin-left: auto;
     margin-right: auto;

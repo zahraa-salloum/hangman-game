@@ -46,7 +46,7 @@ for (let i = 0; i < button.length; i++){
         button[i].disabled = true;
         if(!random_word.toLowerCase().includes(button_value.toLowerCase())){
             lose_count += 1;
-            // console.log(lose_count)
+            
         }
         if(lose_count == 1){
             image.setAttribute('src',"image-2.PNG")
@@ -74,7 +74,7 @@ for (let i = 0; i < button.length; i++){
                 
             }
         }
-        // console.log(word_length)
+        
         word_to_guess.innerHTML = word_length;
         if(!word_length.includes("_")){
             status_game.innerText = "You Win !!"
@@ -87,7 +87,8 @@ function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
     return str.substring(0,index) + chr + str.substring(index+1);
 }
-console.log(random_word)
+
+//console.log(random_word)
 
 
 

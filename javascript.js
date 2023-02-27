@@ -1,4 +1,4 @@
-
+let lose_count = 0;
 const letters = document.getElementById("letters");
 let hint = document.getElementById("hint");
 for (let i = 65; i < 91; i++) {
@@ -34,9 +34,15 @@ for (let i = 0; i < button.length; i++){
     button[i].addEventListener('click',function(){
         button_value = button[i].innerText
         button[i].disabled = true;
-    
+        if(!random_word.toLowerCase().includes(button_value.toLowerCase())){
+            lose_count += 1;
+            // console.log(lose_count)
+        }
     })
-
+    
 }
+// console.log(random_word)
+
+
 
   

@@ -1,7 +1,9 @@
 let lose_count = 0;
 let status_game = document.getElementById("status");
 const letters = document.getElementById("letters");
+let image = document.getElementById("image");
 let hint = document.getElementById("hint");
+
 for (let i = 65; i < 91; i++) {
     let button = document.createElement("button");
     button.innerText = String.fromCharCode(i);
@@ -38,6 +40,19 @@ for (let i = 0; i < button.length; i++){
         if(!random_word.toLowerCase().includes(button_value.toLowerCase())){
             lose_count += 1;
             console.log(lose_count)
+        }
+        if(lose_count == 1){
+            image.setAttribute('src',"image-2.PNG")
+        }else if (lose_count == 2){
+            image.setAttribute('src',"image-3.PNG")
+        }else if (lose_count == 3){
+            image.setAttribute('src',"image-4.PNG")
+        }else if (lose_count == 4){
+            image.setAttribute('src',"image-5.PNG")
+        }else if (lose_count == 5){
+            image.setAttribute('src',"image-6.PNG")
+        }else if (lose_count == 6){
+            image.setAttribute('src',"image-7.PNG")
         }
         if(lose_count == 6){
             status_game.innerText = "You lose"

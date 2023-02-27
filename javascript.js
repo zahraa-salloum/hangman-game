@@ -29,11 +29,14 @@ if(choose_category == 0){
 }
 
 let button = document.getElementsByClassName("button");
+let button_value;
 for (let i = 0; i < button.length; i++){
     button[i].addEventListener('click',function(){
+        button_value = button[i].innerText
         button[i].disabled = true;
+    
     })
 
 }
-console.log(random_word)
+
   

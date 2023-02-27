@@ -1,3 +1,21 @@
 body {
     background-color: rgb(237, 234, 37);
   }
+.letters{
+    text-align: center;
+    margin-top: 50px;
+}
+.button{
+    margin: 10px;
+    background-color: rgb(176, 174, 47);
+    cursor: pointer;
+    box-shadow: 0 5px #999;
+    text-align: center;
+    font-size: 15px;
+    width: 100px;
+  }
+  .button:active {
+    background-color: rgb(176, 174, 47);
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+  }

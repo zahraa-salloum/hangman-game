@@ -15,11 +15,20 @@ let dict = {
   };
 
 let choose_category = Math.floor(Math.random()*3)
-if(choose_category == 0)
+let random_word;
+
+if(choose_category == 0){
     hint.innerHTML = "Hint: It is a fruit"
-else if (choose_category == 1)
-     hint.innerHTML = "Hint: It is an animal"
-else
+    random_word = dict["fruits"][Math.floor(Math.random()*9)]
+}else if (choose_category == 1){
+    hint.innerHTML = "Hint: It is an animal"
+    random_word = dict["animals"][Math.floor(Math.random()*9)]
+}else{
     hint.innerHTML = "Hint: It is a country"
-  console.log(choose_category)
+    random_word = dict["countries"][Math.floor(Math.random()*9)]
+}
+    
+
+
+console.log(random_word)
   

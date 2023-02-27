@@ -76,6 +76,9 @@ for (let i = 0; i < button.length; i++){
         }
         // console.log(word_length)
         word_to_guess.innerHTML = word_length;
+        if(!word_length.includes("_")){
+            status_game.innerText = "You Win !!"
+        }
     }
     })
     
@@ -84,7 +87,7 @@ function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
     return str.substring(0,index) + chr + str.substring(index+1);
 }
-// console.log(random_word)
+console.log(random_word)
 
 
 

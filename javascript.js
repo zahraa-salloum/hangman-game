@@ -27,8 +27,13 @@ if(choose_category == 0){
     hint.innerHTML = "Hint: It is a country"
     random_word = dict["countries"][Math.floor(Math.random()*9)]
 }
-    
 
+let button = document.getElementsByClassName("button");
+for (let i = 0; i < button.length; i++){
+    button[i].addEventListener('click',function(){
+        button[i].disabled = true;
+    })
 
+}
 console.log(random_word)
   

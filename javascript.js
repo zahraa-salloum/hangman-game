@@ -2,6 +2,7 @@ let lose_count = 0;
 let status_game = document.getElementById("status");
 const letters = document.getElementById("letters");
 let image = document.getElementById("image");
+let word_to_guess = document.getElementById("wordToGuess");
 let hint = document.getElementById("hint");
 
 for (let i = 65; i < 91; i++) {
@@ -30,6 +31,11 @@ if(choose_category == 0){
     hint.innerHTML = "Hint: It is a country"
     random_word = dict["countries"][Math.floor(Math.random()*9)]
 }
+let word_length = "";
+for(var i = 0; i < random_word.length;i++){
+    word_length +="_";
+}
+word_to_guess.innerHTML = word_length;
 
 let button = document.getElementsByClassName("button");
 let button_value;
@@ -39,7 +45,7 @@ for (let i = 0; i < button.length; i++){
         button[i].disabled = true;
         if(!random_word.toLowerCase().includes(button_value.toLowerCase())){
             lose_count += 1;
-            console.log(lose_count)
+            // console.log(lose_count)
         }
         if(lose_count == 1){
             image.setAttribute('src',"image-2.PNG")
@@ -57,6 +63,8 @@ for (let i = 0; i < button.length; i++){
         if(lose_count == 6){
             status_game.innerText = "You lose"
         }
+
+        
     })
     
 }
